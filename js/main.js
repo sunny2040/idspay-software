@@ -51,3 +51,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     startSlider();
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".stat h3");
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+            const increment = target / 100; // Adjust the increment value as needed
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 30); // Adjust the speed of counting
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
+    });
+});
