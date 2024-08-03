@@ -11,7 +11,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0 10px; /* Reduced padding */
+    height: 70px; /* Reduced height */
     background: linear-gradient(45deg, #d6edf9, #3422ff);
     color: #fff;
     border-bottom-left-radius: 50px;
@@ -20,8 +21,10 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    width: 200px;
+    height: auto;
 }
+
 
 nav .menu {
     display: flex;
