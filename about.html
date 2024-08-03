@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVision NGO Software</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Additional Styles for Titles */
+        .section-title {
+            font-size: 2em;
+            margin: 20px 0;
+            position: relative;
+            display: inline-block;
+            color: #333;
+            padding-bottom: 5px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background-color: #3498db;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: width 0.4s ease;
+        }
+
+        .section-title:hover::after {
+            width: 100%;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #3498db;
+        }
+
+        /* Slider Styles */
+        .slider {
+            position: relative;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: #ecf0f1;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active {
+            background-color: #3498db;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            color: #ecf0f1;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+
+        .arrow:hover {
+            color: #3498db;
+        }
+
+        .info-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #c2e8f1;
+            border-top: 5px solid #3498db;
+            border-bottom: 5px solid #3498db;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .info-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #cfe2f4;
+            animation: slideIn 1s ease-out;
+        }
+
+        .stat {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .stat h2 {
+            font-size: 1em;
+            color: #3498db;
+        }
+
+        .stat p {
+            font-size: 0.9em;
+        }
+
+        .services, .fundraising, .testimonials {
+            background-color: #ecf0f1;
+            padding: 50px 20px;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #c4dde9;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .testimonial-card {
+            display: flex;
+            align-items: center;
+            background-color: #c4dde9;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        .testimonial-card .content {
+            text-align: left;
+        }
+
+        .testimonial-card .content h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .testimonial-card .content p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/TechVision_logo.png" alt="NGO Logo">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Stories</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="#">Press & Award</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="padding: 20px;">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="assets/images/slide1.jpg" alt="Slide 1"></div>
+                <div class="slide"><img src="assets/images/slide2.jpg" alt="Slide 2"></div>
+                <div class="slide"><img src="assets/images/slide3.jpg" alt="Slide 3"></div>
+            </div>
+            <div class="navigation">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="arrow left-arrow">&#10094;</div>
+            <div class="arrow right-arrow">&#10095;</div>
+        </div>
+
+        <section class="info-section">
+            <h1>Welcome to TechVision NGO</h1>
+            <p>We are a non-profit organization dedicated to improving the lives of underprivileged communities through education, healthcare, and economic opportunities. Join us in making a difference.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat">
+                <h2>60 MILLION</h2>
+                <p>BY 2021, WE'RE AIMING FOR 60 MILLION MORE PEOPLE WORLDWIDE TO HAVE ACCESS TO CLEAN DRINKING WATER</p>
+            </div>
+            <div class="stat">
+                <h2>6/10</h2>
+                <p>6 IN 10 PEOPLE WORLDWIDE, OR 4.5 BILLION, LACK SAFELY MANAGED SANITATION</p>
+            </div>
+            <div class="stat">
+                <h2>Develop and Lead</h2>
+                <p>Develop and Lead OF PEOPLE WORLDWIDE, OR 4.5 BILLION, LACK SAFELY MANAGED SANITATION</p>
+            </div>
+            <div class="stat">
+                <h2>Individual Donors</h2>
+                <p>Individual Donors from WORLDWIDE, OR 4.5 BILLION, CAN DONATE Individual</p>
+            </div>
+            <div class="stat">
+                <h2>Provide a Range</h2>
+                <p>Provide a Range to PEOPLE WORLDWIDE, OR 4.5 BILLION, LACK SAFELY MANAGED SANITATION</p>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2 class="section-title">Our Services</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Education Programs</h3>
+                    <p>We provide educational support to children in need, ensuring they have access to quality education.</p>
+                </div>
+                <div class="card">
+                    <h3>Healthcare Initiatives</h3>
+                    <p>Our healthcare programs focus on providing medical assistance and health education to underprivileged communities.</p>
+                </div>
+                <div class="card">
+                    <h3>Economic Empowerment</h3>
+                    <p>We offer vocational training and economic opportunities to help individuals become self-sufficient.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fundraising">
+            <h2 class="section-title">Fundraising Events</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Annual Charity Run</h3>
+                    <p>Join us for our annual charity run to raise funds for our education programs.</p>
+                </div>
+                <div class="card">
+                    <h3>Health Camp</h3>
+                    <p>We organize health camps to provide free medical checkups and treatments to the needy.</p>
+                </div>
+                <div class="card">
+                    <h3>Community Fair</h3>
+                    <p>Our community fair is a great opportunity to support local artisans and entrepreneurs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2 class="section-title">What People Say</h2>
+            <div class="card-container">
+                <div class="testimonial-card">
+                    <img src="assets/images/slide1.jpg" alt="Person 1">
+                    <div class="content">
+                        <h3>Sun Singh</h3>
+                        <p>"TechVision NGO has been a beacon of hope for our community. Their programs have changed lives."</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="assets/images/slide2.jpg" alt="Person 2">
+                    <div class="content">
+                        <h3>H.Shankar</h3>
+                        <p>"The dedication and passion of the volunteers at TechVision NGO are truly inspiring."</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="assets/images/slide3.jpg" alt="Person 3">
+                    <div class="content">
+                        <h3>Nitish Daksh</h3>
+                        <p>"Thanks to TechVision NGO, my children now have access to quality education."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/images/TechVision_logo.png" alt="NGO Logo">
+                <h3>TechVision NGO Software</h3>
+                <p>We are here to help below poverty people to enhance their life by providing education, food, clothes, financial education, and medical solutions.</p>
+            </div>
+            <div class="footer-quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Activity</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Donate Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Social Networking</h3>
+                <ul class="social-links">
+                    <li><a href="https://facebook.com" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://twitter.com" target="_blank"><img src="assets/images/twitter.jpg" alt="Twitter"></a></li>
+                    <li><a href="https://instagram.com" target="_blank"><img src="assets/images/insta.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-info">
+                <h3>Contact Info</h3>
+                <p>123 Sample St, Sample City, US</p>
+                <p>Phone: 0900000121</p>
+                <p>Email: ngo@example.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TechVision NGO Software By TechVision, All rights reserved</p>
+            <ul class="footer-bottom-links">
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
