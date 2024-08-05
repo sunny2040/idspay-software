@@ -73,3 +73,32 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCount();
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const languageSelect = document.getElementById('language-select');
+    const elementsToTranslate = {
+        welcome: document.querySelector('.intro-content p'),
+        help: document.querySelector('.intro-content h2'),
+        volunteer: document.querySelector('.info-card:nth-of-type(1) h3'),
+        donation: document.querySelector('.info-card:nth-of-type(2) h3'),
+        fundraise: document.querySelector('.info-card:nth-of-type(3) h3'),
+        // add other elements as needed
+    };
+
+    function translatePage(language) {
+        Object.keys(elementsToTranslate).forEach(key => {
+            const element = elementsToTranslate[key];
+            if (element) {
+                element.textContent = translations[language][key] || element.textContent;
+            }
+        });
+    }
+
+    languageSelect.addEventListener('change', (event) => {
+        const selectedLanguage = event.target.value;
+        translatePage(selectedLanguage);
+    });
+
+    // Initialize the page with the default language
+    translatePage(languageSelect.value);
+});

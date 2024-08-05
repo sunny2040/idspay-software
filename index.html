@@ -32,6 +32,12 @@
                 <li><a href="press-award.html">Press & Award</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <div class="language-toggle">
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+                </div>
             </ul>
         </nav>        
     </header>
@@ -195,5 +201,25 @@
         </div>
     </footer>    
     <script src="js/main.js"></script>
+    <script>
+        const translations = {
+            en: {
+                welcome: "Welcome to TechVision NGO Software",
+                help: "We help poor children to get life better",
+                volunteer: "Volunteer",
+                donation: "Donation",
+                fundraise: "Fundraise",
+                // add other translations as needed
+            },
+            hi: {
+                welcome: "TechVision NGO सॉफ़्टवेयर में आपका स्वागत है",
+                help: "हम गरीब बच्चों की ज़िंदगी को बेहतर बनाने में मदद करते हैं",
+                volunteer: "स्वयंसेवी",
+                donation: "दान",
+                fundraise: "फंडरेज़",
+                // add other translations as needed
+            }
+        };
+    </script>
 </body>
 </html>
