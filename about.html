@@ -33,114 +33,231 @@
                 <li><a href="press-award.html">Press & Award</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <div class="languageSwitcher">
+                    <select id="languageSwitcher">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+                </div>
             </ul>
         </nav>        
     </header>
     <main>
-        <div class="slider">
-            <div class="slides">
-                <div class="slide"><img src="assets/images/slide1.jpg" alt="Slide 1"></div>
-                <div class="slide"><img src="assets/images/slide2.jpg" alt="Slide 2"></div>
-                <div class="slide"><img src="assets/images/slide3.jpg" alt="Slide 3"></div>
+        <!-- English Content -->
+        <div class="content en" id="en-content">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="assets/images/slide1.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="assets/images/slide2.jpg" alt="Slide 2"></div>
+                    <div class="slide"><img src="assets/images/slide3.jpg" alt="Slide 3"></div>
+                </div>
+                <div class="navigation">
+                    <div class="dot" data-index="0"></div>
+                    <div class="dot" data-index="1"></div>
+                    <div class="dot" data-index="2"></div>
+                </div>
+                <div class="arrow left-arrow">&#9664;</div>
+                <div class="arrow right-arrow">&#9654;</div>
             </div>
-            <div class="navigation">
-                <div class="dot" data-index="0"></div>
-                <div class="dot" data-index="1"></div>
-                <div class="dot" data-index="2"></div>
-            </div>
-            <div class="arrow left-arrow">&#9664;</div>
-            <div class="arrow right-arrow">&#9654;</div>
+            <section class="info-section">
+                <h1>Welcome to TechVision NGO</h1>
+                <p>We are a non-profit organization dedicated to improving the lives of underprivileged communities through education, healthcare, and economic opportunities. Join us in making a difference.</p>
+            </section>
+
+            <section class="stats">
+                <div class="stat">
+                    <h2>60 MILLION</h2>
+                    <p>BY 2021, WE'RE AIMING FOR 60 MILLION MORE PEOPLE WORLDWIDE TO HAVE ACCESS TO CLEAN DRINKING WATER</p>
+                </div>
+                <div class="stat">
+                    <h2>6/10</h2>
+                    <p>6 IN 10 PEOPLE WORLDWIDE, OR 4.5 BILLION, LACK SAFELY MANAGED SANITATION</p>
+                </div>
+                <div class="stat">
+                    <h2>Develop and Lead</h2>
+                    <p>Develop and Lead OF PEOPLE WORLDWIDE, OR 4.5 BILLION, LACK SAFELY MANAGED SANITATION</p>
+                </div>
+                <div class="stat">
+                    <h2>Individual Donors</h2>
+                    <p>Individual Donors from WORLDWIDE, OR 4.5 BILLION, CAN DONATE Individual</p>
+                </div>
+                <div class="stat">
+                    <h2>Provide a Range</h2>
+                    <p>Provide a Range to PEOPLE WORLDWIDE, OR 4.5 BILLION, LACK SAFELY MANAGED SANITATION</p>
+                </div>
+            </section>
+
+            <section class="services">
+                <h2 class="section-title">Our Services</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Education Programs</h3>
+                        <p>We provide educational support to children in need, ensuring they have access to quality education.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Healthcare Initiatives</h3>
+                        <p>Our healthcare programs focus on providing medical assistance and health education to underprivileged communities.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Economic Empowerment</h3>
+                        <p>We offer vocational training and economic opportunities to help individuals become self-sufficient.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="fundraising">
+                <h2 class="section-title">Fundraising Events</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Annual Charity Run</h3>
+                        <p>Join us for our annual charity run to raise funds for our education programs.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Health Camp</h3>
+                        <p>We organize health camps to provide free medical checkups and treatments to the needy.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Community Fair</h3>
+                        <p>Our community fair is a great opportunity to support local artisans and entrepreneurs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <h2 class="section-title">What People Say</h2>
+                <div class="card-container">
+                    <div class="testimonial-card">
+                        <img src="assets/images/slide1.jpg" alt="Person 1">
+                        <div class="content">
+                            <h3>Sun Singh</h3>
+                            <p>"TechVision NGO has been a beacon of hope for our community. Their programs have changed lives."</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="assets/images/slide2.jpg" alt="Person 2">
+                        <div class="content">
+                            <h3>H.Shankar</h3>
+                            <p>"The dedication and passion of the volunteers at TechVision NGO are truly inspiring."</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="assets/images/slide3.jpg" alt="Person 3">
+                        <div class="content">
+                            <h3>Nitish Daksh</h3>
+                            <p>"Thanks to TechVision NGO, my children now have access to quality education."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <section class="info-section">
-            <h1>Welcome to TechVision NGO</h1>
-            <p>We are a non-profit organization dedicated to improving the lives of underprivileged communities through education, healthcare, and economic opportunities. Join us in making a difference.</p>
-        </section>
 
-        <section class="stats">
-            <div class="stat">
-                <h2>60 MILLION</h2>
-                <p>BY 2021, WE'RE AIMING FOR 60 MILLION MORE PEOPLE WORLDWIDE TO HAVE ACCESS TO CLEAN DRINKING WATER</p>
+        <!-- Hindi Content -->
+        <div class="content hi" id="hi-content" style="display:none;">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="assets/images/slide1.jpg" alt="Slide 1"></div>
+                    <div class="slide"><img src="assets/images/slide2.jpg" alt="Slide 2"></div>
+                    <div class="slide"><img src="assets/images/slide3.jpg" alt="Slide 3"></div>
+                </div>
+                <div class="navigation">
+                    <div class="dot" data-index="0"></div>
+                    <div class="dot" data-index="1"></div>
+                    <div class="dot" data-index="2"></div>
+                </div>
+                <div class="arrow left-arrow">&#9664;</div>
+                <div class="arrow right-arrow">&#9654;</div>
             </div>
-            <div class="stat">
-                <h2>6/10</h2>
-                <p>6 IN 10 PEOPLE WORLDWIDE, OR 4.5 BILLION, LACK SAFELY MANAGED SANITATION</p>
-            </div>
-            <div class="stat">
-                <h2>Develop and Lead</h2>
-                <p>Develop and Lead OF PEOPLE WORLDWIDE, OR 4.5 BILLION, LACK SAFELY MANAGED SANITATION</p>
-            </div>
-            <div class="stat">
-                <h2>Individual Donors</h2>
-                <p>Individual Donors from WORLDWIDE, OR 4.5 BILLION, CAN DONATE Individual</p>
-            </div>
-            <div class="stat">
-                <h2>Provide a Range</h2>
-                <p>Provide a Range to PEOPLE WORLDWIDE, OR 4.5 BILLION, LACK SAFELY MANAGED SANITATION</p>
-            </div>
-        </section>
+            <section class="info-section">
+                <h1>टेकविजन एनजीओ में आपका स्वागत है</h1>
+                <p>हम एक गैर-लाभकारी संगठन हैं जो शिक्षा, स्वास्थ्य देखभाल और आर्थिक अवसरों के माध्यम से वंचित समुदायों के जीवन को बेहतर बनाने के लिए समर्पित हैं। हमारे साथ जुड़ें और बदलाव लाएं।</p>
+            </section>
 
-        <section class="services">
-            <h2 class="section-title">Our Services</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Education Programs</h3>
-                    <p>We provide educational support to children in need, ensuring they have access to quality education.</p>
+            <section class="stats">
+                <div class="stat">
+                    <h2>60 मिलियन</h2>
+                    <p>2021 तक, हम 60 मिलियन अधिक लोगों को स्वच्छ पेयजल तक पहुँच प्रदान करने का लक्ष्य रखते हैं</p>
                 </div>
-                <div class="card">
-                    <h3>Healthcare Initiatives</h3>
-                    <p>Our healthcare programs focus on providing medical assistance and health education to underprivileged communities.</p>
+                <div class="stat">
+                    <h2>6/10</h2>
+                    <p>विश्व स्तर पर 6 में से 10 लोग, या 4.5 बिलियन, सुरक्षित रूप से प्रबंधित स्वच्छता का अभाव रखते हैं</p>
                 </div>
-                <div class="card">
-                    <h3>Economic Empowerment</h3>
-                    <p>We offer vocational training and economic opportunities to help individuals become self-sufficient.</p>
+                <div class="stat">
+                    <h2>विकसित और नेतृत्व</h2>
+                    <p>दुनिया भर के लोगों के लिए विकास और नेतृत्व, या 4.5 बिलियन, सुरक्षित रूप से प्रबंधित स्वच्छता का अभाव</p>
                 </div>
-            </div>
-        </section>
+                <div class="stat">
+                    <h2>व्यक्तिगत दाता</h2>
+                    <p>दुनिया भर के व्यक्तिगत दाता, या 4.5 बिलियन, दान कर सकते हैं</p>
+                </div>
+                <div class="stat">
+                    <h2>एक सीमा प्रदान करें</h2>
+                    <p>विश्व स्तर पर 4.5 बिलियन लोगों को सुरक्षित रूप से प्रबंधित स्वच्छता प्रदान करें</p>
+                </div>
+            </section>
 
-        <section class="fundraising">
-            <h2 class="section-title">Fundraising Events</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Annual Charity Run</h3>
-                    <p>Join us for our annual charity run to raise funds for our education programs.</p>
-                </div>
-                <div class="card">
-                    <h3>Health Camp</h3>
-                    <p>We organize health camps to provide free medical checkups and treatments to the needy.</p>
-                </div>
-                <div class="card">
-                    <h3>Community Fair</h3>
-                    <p>Our community fair is a great opportunity to support local artisans and entrepreneurs.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <h2 class="section-title">What People Say</h2>
-            <div class="card-container">
-                <div class="testimonial-card">
-                    <img src="assets/images/slide1.jpg" alt="Person 1">
-                    <div class="content">
-                        <h3>Sun Singh</h3>
-                        <p>"TechVision NGO has been a beacon of hope for our community. Their programs have changed lives."</p>
+            <section class="services">
+                <h2 class="section-title">हमारी सेवाएं</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>शिक्षा कार्यक्रम</h3>
+                        <p>हम जरूरतमंद बच्चों को शैक्षिक समर्थन प्रदान करते हैं, यह सुनिश्चित करते हैं कि उन्हें गुणवत्ता वाली शिक्षा मिले।</p>
+                    </div>
+                    <div class="card">
+                        <h3>स्वास्थ्य पहल</h3>
+                        <p>हमारे स्वास्थ्य कार्यक्रम वंचित समुदायों को चिकित्सा सहायता और स्वास्थ्य शिक्षा प्रदान करने पर ध्यान केंद्रित करते हैं।</p>
+                    </div>
+                    <div class="card">
+                        <h3>आर्थिक सशक्तिकरण</h3>
+                        <p>हम व्यक्तियों को आत्मनिर्भर बनने में मदद करने के लिए व्यावसायिक प्रशिक्षण और आर्थिक अवसर प्रदान करते हैं।</p>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <img src="assets/images/slide2.jpg" alt="Person 2">
-                    <div class="content">
-                        <h3>H.Shankar</h3>
-                        <p>"The dedication and passion of the volunteers at TechVision NGO are truly inspiring."</p>
+            </section>
+
+            <section class="fundraising">
+                <h2 class="section-title">फंडरेजिंग इवेंट्स</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>वार्षिक चैरिटी रन</h3>
+                        <p>हमारे शिक्षा कार्यक्रमों के लिए धन जुटाने के लिए हमारी वार्षिक चैरिटी रन में शामिल हों।</p>
+                    </div>
+                    <div class="card">
+                        <h3>स्वास्थ्य शिविर</h3>
+                        <p>हम जरूरतमंदों को मुफ्त चिकित्सा जांच और उपचार प्रदान करने के लिए स्वास्थ्य शिविरों का आयोजन करते हैं।</p>
+                    </div>
+                    <div class="card">
+                        <h3>समुदाय मेला</h3>
+                        <p>हमारा समुदाय मेला स्थानीय कारीगरों और उद्यमियों का समर्थन करने का एक शानदार अवसर है।</p>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <img src="assets/images/slide3.jpg" alt="Person 3">
-                    <div class="content">
-                        <h3>Nitish Daksh</h3>
-                        <p>"Thanks to TechVision NGO, my children now have access to quality education."</p>
+            </section>
+
+            <section class="testimonials">
+                <h2 class="section-title">लोग क्या कहते हैं</h2>
+                <div class="card-container">
+                    <div class="testimonial-card">
+                        <img src="assets/images/slide1.jpg" alt="Person 1">
+                        <div class="content">
+                            <h3>Sun Singh</h3>
+                            <p>"टेकविजन एनजीओ हमारे समुदाय के लिए आशा की किरण रहा है। उनके कार्यक्रमों ने जीवन बदल दिया है।"</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="assets/images/slide2.jpg" alt="Person 2">
+                        <div class="content">
+                            <h3>H.Shankar</h3>
+                            <p>"टेकविजन एनजीओ के स्वयंसेवकों का समर्पण और जुनून वास्तव में प्रेरणादायक है।"</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="assets/images/slide3.jpg" alt="Person 3">
+                        <div class="content">
+                            <h3>Nitish Daksh</h3>
+                            <p>"टेकविजन एनजीओ की बदौलत, मेरे बच्चों को अब गुणवत्ता वाली शिक्षा मिल रही है।"</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="footer-container">
@@ -184,6 +301,13 @@
             </ul>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById('languageSwitcher').addEventListener('change', function () {
+            var selectedLanguage = this.value;
+            document.getElementById('en-content').style.display = selectedLanguage === 'en' ? 'block' : 'none';
+            document.getElementById('hi-content').style.display = selectedLanguage === 'hi' ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html>

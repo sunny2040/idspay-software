@@ -32,8 +32,14 @@
                 <li><a href="press-award.html">Press & Award</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <div class="language-switcher">
+                 <select id="languageSwitcher">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+                </div>
             </ul>
-        </nav>        
+        </nav>
     </header>
     <main>
         <div class="slider">
@@ -41,9 +47,13 @@
                 <div class="slide"><img src="assets/images/slide1.jpg" alt="Slide 1"></div>
             </div>
         </div>
-        <section class="gallery-intro">
+        <section id="en-content" class="gallery-intro">
             <h1>Our Gallery</h1>
             <p>Explore our gallery to see the impact we are making through various initiatives and programs.</p>
+        </section>
+        <section id="hi-content" class="gallery-intro" style="display: none;">
+            <h1>हमारी गैलरी</h1>
+            <p>हमारी गैलरी को एक्सप्लोर करें और देखें कि हम विभिन्न पहलों और कार्यक्रमों के माध्यम से कैसा प्रभाव डाल रहे हैं।</p>
         </section>
         
         <section class="gallery-grid">
@@ -164,5 +174,17 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('languageSwitcher').addEventListener('change', function() {
+            var selectedLanguage = this.value;
+            if (selectedLanguage === 'hi') {
+                document.getElementById('en-content').style.display = 'none';
+                document.getElementById('hi-content').style.display = 'block';
+            } else {
+                document.getElementById('en-content').style.display = 'block';
+                document.getElementById('hi-content').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

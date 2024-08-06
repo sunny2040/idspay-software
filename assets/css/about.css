@@ -102,3 +102,13 @@
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
+.languageSwitcher {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+#languageSwitcher {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

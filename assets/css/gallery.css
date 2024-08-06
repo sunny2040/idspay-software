@@ -327,3 +327,13 @@ footer {
         font-size: 0.9em;
     }
 }
+.languageSwitcher {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+#languageSwitcher {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

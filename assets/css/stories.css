@@ -332,3 +332,13 @@ body {
         .fundraiser-item {
             background: #eaf1e4;
         }
+        .languageSelect {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+        
+        #languageSelect {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
